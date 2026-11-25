@@ -1,0 +1,3 @@
+# Add with: crontab -u www-data -e
+# Runs Laravel's scheduler every minute; it decides when alerts:evaluate and alerts:digest are due.
+* * * * * cd /var/www/afyawatch && php artisan schedule:run >> /dev/null 2>&1
